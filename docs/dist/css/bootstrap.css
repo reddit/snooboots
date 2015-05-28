@@ -3,6 +3,20 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/* These are theme-change specific variables. Most variables are handled in the root less directory. */
+.shadow {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+}
+.bottomShadow {
+  -webkit-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .05);
+          box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .05);
+}
+.tween {
+  -webkit-transition: .2s;
+       -o-transition: .2s;
+          transition: .2s;
+}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -6795,5 +6809,282 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.label {
+  font-weight: normal;
+}
+.label-default {
+  border: 1px solid #636363;
+}
+.label-primary {
+  border: 1px solid #2a6598;
+}
+.label-success {
+  border: 1px solid #47a447;
+}
+.label-info {
+  border: 1px solid #39b3d7;
+}
+.label-warning {
+  border: 1px solid #ed9c28;
+}
+.label-danger {
+  border: 1px solid #d2322d;
+}
+.btn.text-muted {
+  color: #777;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+}
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+  padding: 6px 5px 1px;
+  font-size: .8em;
+}
+.btn-default {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #222;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 0 0 #e6e6e6;
+          box-shadow: 0 3px 0 0 #e6e6e6;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+       -o-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.btn-default:hover,
+.btn-default:focus {
+  color: #222;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 0 0 #e6e6e6;
+          box-shadow: 0 1px 0 0 #e6e6e6;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+html.no-touch .btn-default:active {
+  background-color: #e6e6e6;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #337ab7;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 0 0 #286090;
+          box-shadow: 0 3px 0 0 #286090;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+       -o-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #5094ce;
+  -webkit-box-shadow: 0 1px 0 0 #286090;
+          box-shadow: 0 1px 0 0 #286090;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+html.no-touch .btn-primary:active {
+  background-color: #286090;
+}
+.btn-success {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #5cb85c;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 0 0 #449d44;
+          box-shadow: 0 3px 0 0 #449d44;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+       -o-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.btn-success:hover,
+.btn-success:focus {
+  color: #fff;
+  background-color: #80c780;
+  -webkit-box-shadow: 0 1px 0 0 #449d44;
+          box-shadow: 0 1px 0 0 #449d44;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+html.no-touch .btn-success:active {
+  background-color: #449d44;
+}
+.btn-info {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #5bc0de;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 0 0 #31b0d5;
+          box-shadow: 0 3px 0 0 #31b0d5;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+       -o-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.btn-info:hover,
+.btn-info:focus {
+  color: #fff;
+  background-color: #85d0e7;
+  -webkit-box-shadow: 0 1px 0 0 #31b0d5;
+          box-shadow: 0 1px 0 0 #31b0d5;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+html.no-touch .btn-info:active {
+  background-color: #31b0d5;
+}
+.btn-warning {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #f0ad4e;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 0 0 #ec971f;
+          box-shadow: 0 3px 0 0 #ec971f;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+       -o-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.btn-warning:hover,
+.btn-warning:focus {
+  color: #fff;
+  background-color: #f4c37d;
+  -webkit-box-shadow: 0 1px 0 0 #ec971f;
+          box-shadow: 0 1px 0 0 #ec971f;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+html.no-touch .btn-warning:active {
+  background-color: #ec971f;
+}
+.btn-danger {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #d9534f;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 0 0 #c9302c;
+          box-shadow: 0 3px 0 0 #c9302c;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+       -o-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.btn-danger:hover,
+.btn-danger:focus {
+  color: #fff;
+  background-color: #e27c79;
+  -webkit-box-shadow: 0 1px 0 0 #c9302c;
+          box-shadow: 0 1px 0 0 #c9302c;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+html.no-touch .btn-danger:active {
+  background-color: #c9302c;
+}
+.panel {
+  border: none;
+}
+.panel-footer {
+  background: none;
+  border-top: none;
+}
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+svg:not(:root) {
+  overflow: visible;
+}
+button,
+a {
+  cursor: pointer;
+}
+button:active,
+a:active {
+  outline: none;
 }
 /*# sourceMappingURL=bootstrap.css.map */

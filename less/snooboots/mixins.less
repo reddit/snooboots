@@ -1,0 +1,26 @@
+@import "../mixins.less";
+@import "../mixins/vendor-prefixes.less";
+
+.shadow {
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+}
+
+.bottomShadow {
+  box-shadow: 0 5px 5px -5px rgba(0,0,0,0.05);
+}
+
+.tween {
+  .transition(0.2s);
+}
+
+.transform(@output) {
+  -webkit-transform: @output;
+      -ms-transform: @output; // IE9 only
+       -o-transform: @output;
+          transform: @output;
+}
+
+.icon-font(@rules) {
+  [class^="icon-"] {@rules();}
+  [class*=" icon-"] {@rules();}
+}

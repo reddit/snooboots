@@ -1,0 +1,168 @@
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "../variables.less";
+@import "../mixins.less";
+
+@import "./theme-variables.less";
+@import "./mixins.less";
+
+//
+// Labels
+// --------------------------------------------------
+
+.label-border(@border-color) {
+  border: 1px solid @border-color;
+}
+
+.label {
+  font-weight: normal;
+}
+
+.label-default {
+  .label-border(darken(@label-default-bg, 8%));
+}
+
+.label-primary {
+  .label-border(darken(@label-primary-bg, 8%));
+}
+
+.label-success {
+  .label-border(darken(@label-success-bg, 8%));
+}
+
+.label-info {
+  .label-border(darken(@label-info-bg, 8%));
+}
+
+.label-warning {
+  .label-border(darken(@label-warning-bg, 8%));
+}
+
+.label-danger {
+  .label-border(darken(@label-danger-bg, 8%));
+}
+
+
+//
+// Forms
+// --------------------------------------------------
+
+//
+// Buttons
+// --------------------------------------------------
+
+.btn.text-muted {
+  color: @text-muted;
+}
+
+.btn-reddit-mixin(@btn-color, @text-color) {
+  @darkenBgColor: darken(@btn-color, 10%);
+  @lightenBgColor: lighten(@btn-color, 10%);
+
+  .box-shadow(0 3px 0 0 @darkenBgColor);
+  .translate(0,-2px);
+  .transition(all .2s); //box-shadow 0.1s, transform 0.1s, background-color 0.3s
+  text-transform: uppercase;
+  background-color: @btn-color;
+  color: @text-color;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 3px;
+  display: inline-block;
+  outline: 0;
+  padding: 5px 14px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .box-shadow(0 1px 0 0 @darkenBgColor);
+    .translate(0,0);
+    background-color: @lightenBgColor;
+    color: @text-color;
+  }
+
+  html.no-touch &:active {
+    background-color: @darkenBgColor;
+  }
+}
+
+// Common styles
+.btn {
+  // Remove the gradient for the pressed/active state
+  &:active,
+  &.active {
+    background-image: none;
+  }
+}
+
+
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+  padding: 6px 5px 1px;
+  font-size: .8em;
+}
+
+// Apply the mixin to the buttons
+.btn-default {
+  .btn-reddit-mixin(@btn-default-bg, @black);
+  border: solid 1px #eee;
+}
+
+.btn-primary {
+  .btn-reddit-mixin(@btn-primary-bg, @white);
+}
+
+.btn-success {
+  .btn-reddit-mixin(@btn-success-bg, @white);
+}
+
+.btn-info { 
+  .btn-reddit-mixin(@btn-info-bg, @white);
+}
+
+.btn-warning { 
+  .btn-reddit-mixin(@btn-warning-bg, @white);
+}
+
+.btn-danger {
+  .btn-reddit-mixin(@btn-danger-bg, @white);
+}
+
+//
+// Panels
+// --------------------------------------------------
+
+.panel {
+  border: none;
+}
+
+.panel-footer {
+  background: none;
+  border-top: none;
+}
+
+// Todo: Change outline style on inputs? Feels very bootstrappy and kinda overkill.
+
+// Reset
+// -------------------------------------------------
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+svg:not(:root) {
+  overflow: visible;
+}
+
+button, a {
+  cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
+}
